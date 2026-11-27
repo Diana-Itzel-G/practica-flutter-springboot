@@ -98,14 +98,14 @@ class _CarreraCard extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: AppTheme.azulPetroleo,
+                color: scheme.primary.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(14),
               ),
               alignment: Alignment.center,
               child: Text(
                 carrera.nombre.isNotEmpty ? carrera.nombre[0] : '?',
-                style: const TextStyle(
-                    color: Colors.white,
+                style: TextStyle(
+                    color: scheme.primary,
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),
