@@ -117,7 +117,7 @@ class _DetalleScreenState extends State<DetalleScreen> {
     }
 
     return Scaffold(
-      appBar: const AppBarAzul(titulo: 'Detalle'),
+      appBar: const AppBarApp(titulo: 'Detalle'),
       body: body,
     );
   }

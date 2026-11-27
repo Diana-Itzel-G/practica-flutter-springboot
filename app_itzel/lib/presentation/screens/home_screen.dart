@@ -67,7 +67,7 @@ class HomeScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: const AppBarAzul(titulo: 'Carreras'),
+      appBar: const AppBarApp(titulo: 'Carreras'),
       body: body,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => context.push('/nuevo'),
