@@ -67,7 +67,7 @@ class HomeScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: const AppBarRosa(titulo: 'Carreras'),
+      appBar: const AppBarAzul(titulo: 'Carreras'),
       body: body,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => context.push('/nuevo'),
@@ -98,7 +98,7 @@ class _CarreraCard extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: AppTheme.terracota,
+                color: AppTheme.azulPetroleo,
                 borderRadius: BorderRadius.circular(14),
               ),
               alignment: Alignment.center,

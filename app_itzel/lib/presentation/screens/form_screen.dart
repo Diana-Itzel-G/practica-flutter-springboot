@@ -75,7 +75,7 @@ class _FormScreenState extends State<FormScreen> {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      appBar: AppBarRosa(titulo: editando ? 'Editar carrera' : 'Nueva carrera'),
+      appBar: AppBarAzul(titulo: editando ? 'Editar carrera' : 'Nueva carrera'),
       body: Form(
         key: _formKey,
         child: ListView(

@@ -1,78 +1,120 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  /// Color principal terracota (sólido, sin degradado).
-  static const terracota = Color(0xFFC0623F);
-  static const terracotaOscuro = Color(0xFF9C4A2C);
+  /// Color principal azul petróleo.
+  static const azulPetroleo = Color(0xFF0F4C5C);
+  static const azulPetroleoOscuro = Color(0xFF0A3742);
   static const fondo = Color(0xFFFBF5F1);
 
   static ThemeData _base(Brightness b) {
     final esClaro = b == Brightness.light;
+
     final scheme = ColorScheme.fromSeed(
-      seedColor: terracota,
+      seedColor: azulPetroleo,
       brightness: b,
-      primary: esClaro ? terracota : const Color(0xFFE59A7B),
+      primary: esClaro ? azulPetroleo : azulPetroleoOscuro,
     );
+
     final radio = BorderRadius.circular(16);
 
     return ThemeData(
       useMaterial3: true,
       colorScheme: scheme,
-      scaffoldBackgroundColor: esClaro ? fondo : const Color(0xFF1E1714),
+      scaffoldBackgroundColor:
+          esClaro ? fondo : const Color(0xFF1E1714),
+
+      // COMMIT 2
       appBarTheme: const AppBarTheme(
         centerTitle: true,
         elevation: 0,
-        backgroundColor: terracota,
-        foregroundColor: Colors.white,
+        backgroundColor: Colors.white,
+        foregroundColor: azulPetroleo,
+        surfaceTintColor: Colors.transparent,
         titleTextStyle: TextStyle(
-            fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white),
+          fontSize: 20,
+          fontWeight: FontWeight.w700,
+          color: azulPetroleo,
+        ),
       ),
+
       cardTheme: CardThemeData(
         elevation: 0,
         color: esClaro ? Colors.white : const Color(0xFF2B201C),
         shape: RoundedRectangleBorder(
           borderRadius: radio,
-          side: BorderSide(color: scheme.primary.withValues(alpha: 0.12)),
+          side: BorderSide(
+            color: scheme.primary.withValues(alpha: 0.12),
+          ),
         ),
-        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+        margin: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 6,
+        ),
       ),
+
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: esClaro ? Colors.white : const Color(0xFF2B201C),
-        border: OutlineInputBorder(borderRadius: radio),
+        fillColor:
+            esClaro ? Colors.white : const Color(0xFF2B201C),
+        border: OutlineInputBorder(
+          borderRadius: radio,
+        ),
         enabledBorder: OutlineInputBorder(
           borderRadius: radio,
-          borderSide: BorderSide(color: scheme.primary.withValues(alpha: 0.25)),
+          borderSide: BorderSide(
+            color: scheme.primary.withValues(alpha: 0.25),
+          ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: radio,
-          borderSide: BorderSide(color: scheme.primary, width: 2),
+          borderSide: BorderSide(
+            color: scheme.primary,
+            width: 2,
+          ),
         ),
       ),
+
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
           minimumSize: const Size.fromHeight(52),
-          shape: RoundedRectangleBorder(borderRadius: radio),
-          textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          shape: RoundedRectangleBorder(
+            borderRadius: radio,
+          ),
+          textStyle: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
         ),
       ),
+
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           minimumSize: const Size.fromHeight(52),
-          shape: RoundedRectangleBorder(borderRadius: radio),
+          shape: RoundedRectangleBorder(
+            borderRadius: radio,
+          ),
         ),
       ),
+
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-        backgroundColor: terracota,
+        backgroundColor: azulPetroleo,
         foregroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: radio),
+        shape: RoundedRectangleBorder(
+          borderRadius: radio,
+        ),
       ),
+
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
+
       dialogTheme: DialogThemeData(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
       ),
     );
   }
@@ -81,18 +123,34 @@ class AppTheme {
   static final dark = _base(Brightness.dark);
 }
 
-/// AppBar con fondo terracota sólido.
-class AppBarRosa extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarRosa({super.key, required this.titulo, this.actions});
+/// AppBar plana con línea inferior
+class AppBarAzul extends StatelessWidget
+    implements PreferredSizeWidget {
+  const AppBarAzul({
+    super.key,
+    required this.titulo,
+    this.actions,
+  });
+
   final String titulo;
   final List<Widget>? actions;
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize =>
+      const Size.fromHeight(kToolbarHeight + 1);
 
   @override
-  Widget build(BuildContext context) => AppBar(
-        title: Text(titulo),
-        actions: actions,
-      );
+  Widget build(BuildContext context) {
+    return AppBar(
+      title: Text(titulo),
+      actions: actions,
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(1),
+        child: Container(
+          height: 1,
+          color: const Color(0xFFD6D6D6),
+        ),
+      ),
+    );
+  }
 }

@@ -47,11 +47,11 @@ class _DetalleScreenState extends State<DetalleScreen> {
           Container(
             padding: const EdgeInsets.all(24),
             decoration: BoxDecoration(
-              color: AppTheme.terracota,
+              color: AppTheme.azulPetroleo,
               borderRadius: BorderRadius.circular(24),
               boxShadow: [
                 BoxShadow(
-                  color: AppTheme.terracota.withValues(alpha: 0.30),
+                  color: AppTheme.azulPetroleo.withValues(alpha: 0.30),
                   blurRadius: 18,
                   offset: const Offset(0, 8),
                 ),
@@ -117,7 +117,7 @@ class _DetalleScreenState extends State<DetalleScreen> {
     }
 
     return Scaffold(
-      appBar: const AppBarRosa(titulo: 'Detalle'),
+      appBar: const AppBarAzul(titulo: 'Detalle'),
       body: body,
     );
   }
