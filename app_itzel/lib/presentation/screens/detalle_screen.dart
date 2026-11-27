@@ -49,13 +49,6 @@ class _DetalleScreenState extends State<DetalleScreen> {
             decoration: BoxDecoration(
               color: AppTheme.azulPetroleo,
               borderRadius: BorderRadius.circular(24),
-              boxShadow: [
-                BoxShadow(
-                  color: AppTheme.azulPetroleo.withValues(alpha: 0.30),
-                  blurRadius: 18,
-                  offset: const Offset(0, 8),
-                ),
-              ],
             ),
             child: Column(children: [
               const CircleAvatar(
