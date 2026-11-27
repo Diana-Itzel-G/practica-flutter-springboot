@@ -53,9 +53,9 @@ class _DetalleScreenState extends State<DetalleScreen> {
             child: Column(children: [
               const CircleAvatar(
                 radius: 34,
-                backgroundColor: Colors.white24,
+                backgroundColor: Colors.white,
                 child: Icon(Icons.school_rounded,
-                    size: 38, color: Colors.white),
+                    size: 38, color: AppTheme.azulPetroleo),
               ),
               const SizedBox(height: 14),
               Text(
