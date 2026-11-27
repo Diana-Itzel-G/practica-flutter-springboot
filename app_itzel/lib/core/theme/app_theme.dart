@@ -120,14 +120,25 @@ class AppTheme {
         ),
       ),
 
+      // COMMIT 6
+      dividerTheme: const DividerThemeData(
+        thickness: 1,
+        color: Color(0xFFE0E0E0),
+        space: 1,
+      ),
+
+      // COMMIT 6
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
+        elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
       ),
 
+      // COMMIT 6
       dialogTheme: DialogThemeData(
+        elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
