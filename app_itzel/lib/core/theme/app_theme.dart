@@ -55,26 +55,34 @@ class AppTheme {
       ),
 
       inputDecorationTheme: InputDecorationTheme(
-        filled: true,
-        fillColor:
-            esClaro ? Colors.white : const Color(0xFF2B201C),
-        border: OutlineInputBorder(
-          borderRadius: radio,
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: radio,
-          borderSide: BorderSide(
-            color: scheme.primary.withValues(alpha: 0.25),
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: radio,
-          borderSide: BorderSide(
-            color: scheme.primary,
-            width: 2,
-          ),
-        ),
-      ),
+  filled: true,
+  fillColor:
+      esClaro ? Colors.white : const Color(0xFF2B201C),
+
+  border: OutlineInputBorder(
+    borderRadius: radio,
+    borderSide: const BorderSide(
+      color: Color(0xFFD6D6D6),
+      width: 1,
+    ),
+  ),
+
+  enabledBorder: OutlineInputBorder(
+    borderRadius: radio,
+    borderSide: const BorderSide(
+      color: Color(0xFFD6D6D6),
+      width: 1,
+    ),
+  ),
+
+  focusedBorder: OutlineInputBorder(
+    borderRadius: radio,
+    borderSide: const BorderSide(
+      color: azulPetroleo,
+      width: 2,
+    ),
+  ),
+),
 
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
