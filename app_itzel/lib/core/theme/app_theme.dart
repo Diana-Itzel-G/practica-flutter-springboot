@@ -23,7 +23,6 @@ class AppTheme {
       scaffoldBackgroundColor:
           esClaro ? fondo : const Color(0xFF1E1714),
 
-      // COMMIT 2
       appBarTheme: const AppBarTheme(
         centerTitle: true,
         elevation: 0,
@@ -37,7 +36,6 @@ class AppTheme {
         ),
       ),
 
-      // COMMIT 3
       cardTheme: CardThemeData(
         elevation: 0,
         color: esClaro ? Colors.white : const Color(0xFF2B201C),
@@ -54,7 +52,6 @@ class AppTheme {
         ),
       ),
 
-      // COMMIT 4
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor:
@@ -85,7 +82,6 @@ class AppTheme {
         ),
       ),
 
-      // COMMIT 5
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
           elevation: 0,
@@ -100,7 +96,6 @@ class AppTheme {
         ),
       ),
 
-      // COMMIT 5
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           minimumSize: const Size.fromHeight(52),
@@ -110,7 +105,6 @@ class AppTheme {
         ),
       ),
 
-      // COMMIT 5
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         elevation: 0,
         backgroundColor: azulPetroleo,
@@ -120,14 +114,12 @@ class AppTheme {
         ),
       ),
 
-      // COMMIT 6
       dividerTheme: const DividerThemeData(
         thickness: 1,
         color: Color(0xFFE0E0E0),
         space: 1,
       ),
 
-      // COMMIT 6
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
         elevation: 0,
@@ -136,7 +128,6 @@ class AppTheme {
         ),
       ),
 
-      // COMMIT 6
       dialogTheme: DialogThemeData(
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -150,10 +141,10 @@ class AppTheme {
   static final dark = _base(Brightness.dark);
 }
 
-/// AppBar plana con línea inferior
-class AppBarAzul extends StatelessWidget
+/// AppBar reutilizable de la aplicación
+class AppBarApp extends StatelessWidget
     implements PreferredSizeWidget {
-  const AppBarAzul({
+  const AppBarApp({
     super.key,
     required this.titulo,
     this.actions,
