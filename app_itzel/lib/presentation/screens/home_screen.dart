@@ -151,15 +151,14 @@ class _Chip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
       decoration: BoxDecoration(
-        color: scheme.primaryContainer,
         borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: scheme.outlineVariant),
       ),
       child: Row(mainAxisSize: MainAxisSize.min, children: [
-        Icon(icon, size: 14, color: scheme.onPrimaryContainer),
+        Icon(icon, size: 14, color: scheme.primary),
         const SizedBox(width: 4),
         Text(texto,
-            style:
-                TextStyle(fontSize: 12, color: scheme.onPrimaryContainer)),
+            style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
       ]),
     );
   }
