@@ -37,13 +37,15 @@ class AppTheme {
         ),
       ),
 
+      // COMMIT 3
       cardTheme: CardThemeData(
         elevation: 0,
         color: esClaro ? Colors.white : const Color(0xFF2B201C),
         shape: RoundedRectangleBorder(
           borderRadius: radio,
-          side: BorderSide(
-            color: scheme.primary.withValues(alpha: 0.12),
+          side: const BorderSide(
+            color: Color(0xFFD6D6D6),
+            width: 1,
           ),
         ),
         margin: const EdgeInsets.symmetric(
