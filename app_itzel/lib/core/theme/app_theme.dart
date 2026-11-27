@@ -54,38 +54,41 @@ class AppTheme {
         ),
       ),
 
+      // COMMIT 4
       inputDecorationTheme: InputDecorationTheme(
-  filled: true,
-  fillColor:
-      esClaro ? Colors.white : const Color(0xFF2B201C),
+        filled: true,
+        fillColor:
+            esClaro ? Colors.white : const Color(0xFF2B201C),
 
-  border: OutlineInputBorder(
-    borderRadius: radio,
-    borderSide: const BorderSide(
-      color: Color(0xFFD6D6D6),
-      width: 1,
-    ),
-  ),
+        border: OutlineInputBorder(
+          borderRadius: radio,
+          borderSide: const BorderSide(
+            color: Color(0xFFD6D6D6),
+            width: 1,
+          ),
+        ),
 
-  enabledBorder: OutlineInputBorder(
-    borderRadius: radio,
-    borderSide: const BorderSide(
-      color: Color(0xFFD6D6D6),
-      width: 1,
-    ),
-  ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: radio,
+          borderSide: const BorderSide(
+            color: Color(0xFFD6D6D6),
+            width: 1,
+          ),
+        ),
 
-  focusedBorder: OutlineInputBorder(
-    borderRadius: radio,
-    borderSide: const BorderSide(
-      color: azulPetroleo,
-      width: 2,
-    ),
-  ),
-),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: radio,
+          borderSide: const BorderSide(
+            color: azulPetroleo,
+            width: 2,
+          ),
+        ),
+      ),
 
+      // COMMIT 5
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
+          elevation: 0,
           minimumSize: const Size.fromHeight(52),
           shape: RoundedRectangleBorder(
             borderRadius: radio,
@@ -97,6 +100,7 @@ class AppTheme {
         ),
       ),
 
+      // COMMIT 5
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           minimumSize: const Size.fromHeight(52),
@@ -106,7 +110,9 @@ class AppTheme {
         ),
       ),
 
+      // COMMIT 5
       floatingActionButtonTheme: FloatingActionButtonThemeData(
+        elevation: 0,
         backgroundColor: azulPetroleo,
         foregroundColor: Colors.white,
         shape: RoundedRectangleBorder(
