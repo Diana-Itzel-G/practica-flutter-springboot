@@ -23,7 +23,8 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(Icons.wifi_off_rounded, size: 64, color: scheme.primary),
+            Icon(Icons.wifi_off_rounded,
+                size: 64, color: scheme.primary.withValues(alpha: 0.6)),
             const SizedBox(height: 16),
             Text(c.error!, textAlign: TextAlign.center),
             const SizedBox(height: 16),
@@ -38,7 +39,8 @@ class HomeScreen extends StatelessWidget {
     } else if (c.items.isEmpty) {
       body = Center(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Icon(Icons.school_outlined, size: 72, color: scheme.primary),
+          Icon(Icons.school_outlined,
+              size: 72, color: scheme.primary.withValues(alpha: 0.6)),
           const SizedBox(height: 12),
           const Text('Aún no hay carreras registradas'),
         ]),
@@ -52,11 +54,14 @@ class HomeScreen extends StatelessWidget {
           itemBuilder: (context, i) {
             if (i == 0) {
               return Padding(
-                padding: const EdgeInsets.fromLTRB(20, 8, 20, 8),
+                padding: const EdgeInsets.fromLTRB(20, 12, 20, 8),
                 child: Text(
-                  '${c.items.length} carreras',
+                  '${c.items.length} carreras'.toUpperCase(),
                   style: TextStyle(
-                      color: scheme.primary, fontWeight: FontWeight.w600),
+                      color: scheme.onSurfaceVariant,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1.2),
                 ),
               );
             }
