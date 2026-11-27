@@ -84,11 +84,11 @@ class _FormScreenState extends State<FormScreen> {
             Center(
               child: CircleAvatar(
                 radius: 36,
-                backgroundColor: scheme.primaryContainer,
+                backgroundColor: scheme.primary.withValues(alpha: 0.12),
                 child: Icon(
                     editando ? Icons.edit_note_rounded : Icons.add_card_rounded,
                     size: 36,
-                    color: scheme.onPrimaryContainer),
+                    color: scheme.primary),
               ),
             ),
             const SizedBox(height: 24),

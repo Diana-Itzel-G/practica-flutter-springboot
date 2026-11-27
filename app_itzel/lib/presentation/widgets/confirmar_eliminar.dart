@@ -26,6 +26,7 @@ Future<bool> confirmarEliminar(
         ),
         FilledButton(
           style: FilledButton.styleFrom(
+            elevation: 0,
             backgroundColor: scheme.error,
             minimumSize: const Size(120, 44),
           ),
