@@ -79,7 +79,7 @@ class _DetalleScreenState extends State<DetalleScreen> {
                   icon: Icons.schedule_rounded,
                   titulo: 'Duración',
                   valor: '${d.duracionSemestres} semestres'),
-              const Divider(height: 1, indent: 16, endIndent: 16),
+              const Divider(height: 1),
               _Dato(
                   icon: Icons.class_outlined,
                   titulo: 'Modalidad',
@@ -127,8 +127,8 @@ class _Dato extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
     return ListTile(
       leading: CircleAvatar(
-        backgroundColor: scheme.primaryContainer,
-        child: Icon(icon, color: scheme.onPrimaryContainer),
+        backgroundColor: scheme.primary.withValues(alpha: 0.12),
+        child: Icon(icon, color: scheme.primary),
       ),
       title: Text(titulo,
           style: TextStyle(fontSize: 13, color: scheme.onSurfaceVariant)),
